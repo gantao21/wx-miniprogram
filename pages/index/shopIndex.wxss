@@ -1,0 +1,64 @@
+/* pages/index/shopIndex.wxss */
+.searchBar{
+  margin-left: 2%;
+  width:96%;
+  background-color: #eee;
+  border-radius:10rpx;
+  height: 60rpx
+}
+.searchIcon{
+  margin: 18rpx 10rpx 22rpx 40rpx;
+  overflow: hidden;
+}
+.searchBar input{
+  margin-left: 80rpx;
+  margin-top: -78rpx;
+  font-size: 26rpx;
+}
+#storeInfo{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction:row;
+}
+#storeInfo view:first-child{
+  width: 20%;
+  height:200rpx;
+  position: absolute; 
+}
+#storeInfo view:first-child image{
+  width: 120rpx;
+  margin-top: -140rpx;
+  margin-left: 16rpx;
+}
+#storeInfo view:nth-child(2){
+  width: 55%;
+  height:160rpx;
+  margin-left: 20%;
+  margin-top: 20rpx;
+  border-right: 1px solid #eee;
+}
+#storeInfo view:nth-child(2) text:first-child{
+  margin-top: 20rpx;
+}
+#storeInfo view:nth-child(2) text{
+  display: block;
+  font-size: 30rpx;
+  color: #13252E;
+}
+#storeInfo view:nth-child(3){
+  width: 20%;
+  height:200rpx;
+}
+#storeInfo view:nth-child(3) text:first-child{
+  margin-top: 20rpx;
+}
+#storeInfo view:nth-child(3) text{
+  display: block;
+  text-align: right;
+  font-size: 24rpx;
+  color: #13252E;
+}
+#storeInfo view:nth-child(3) text:nth-child(even){
+  color: #d4237a;
+}

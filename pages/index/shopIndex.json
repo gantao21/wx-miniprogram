@@ -1,9 +1,7 @@
 {
-  "navigationBarBackgroundColor": "#fff",
+  "navigationBarBackgroundColor": "#efefef",
   "navigationBarTextStyle": "black",
   "navigationBarTitleText": "首页",
-  "navigationBarTitleText": "社区电商",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"
-  
 }

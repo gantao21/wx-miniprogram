@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/index/shopIndex",
     "pages/index/home",
+    "pages/index/index",
     "pages/logs/logs",
     "pages/web/detail",
     "pages/index/shop_detail",
@@ -11,6 +12,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#efefef",
+    "navigationBarTitleText": "首页",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "社区电商",
     "navigationBarTextStyle": "black"
@@ -22,17 +25,20 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index/shopIndex",
         "text": "首页",
         "iconPath": "img/home.png",
         "selectedIconPath": "img/home-sel.png"
       },
       {
+        "pagePath": "pages/index/index",
+        "text": "购物车",
+        "iconPath": "img/shopCar.png",
+        "selectedIconPath": "img/shopCar-sel.png"
         "pagePath": "pages/index/mycart",
         "text": "购物车",
         "iconPath": "img/cart.png",
-        "selectedIconPath": "img/cart-sel.png"
-      },
+        "selectedIconPath": "img/cart-sel.png"      },
       {
         "pagePath": "pages/index/home",
         "text": "我的",

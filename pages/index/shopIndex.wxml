@@ -1,0 +1,30 @@
+<!shopIndex.wxml-->
+<view class="container">
+  <view>
+    <cover-image src="{{titleImg}}"></cover-image>
+  </view>
+  <view class="search">
+    <view class="searchBar">  
+      <icon class="searchIcon" size='15' type='search'>
+      </icon>  
+      <input class=""  placeholder="输入商品名称，搜索商品" value="{{searchValue}}"/>  
+    </view>
+  </view>
+  <view id="storeInfo" wx:for="{{storeInfoData}}">
+    <view id='storeIcon'>
+      <image src="{{item.storeImg}}" mode='aspectFit'></image>
+    </view>
+    <view>
+      <text>{{item.storeCode}}</text>
+      <text>{{item.storeLocation}}</text>
+    </view>
+    <view>
+      <text>{{item.fansDes}}</text>
+      <text>{{item.fansNum}}</text>
+      <text>{{item.shopNumDes}}</text>
+      <text>{{item.shopNum}}</text>
+    </view>
+  </view>
+
+</view>
+  
