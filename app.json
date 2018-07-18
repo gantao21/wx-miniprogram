@@ -8,7 +8,8 @@
     "pages/index/detail",
     "pages/search/search",
     "pages/index/mycart",
-    "pages/index/order_details"
+    "pages/index/confirmOrder",
+    "pages/index/payType"
   ],
   "window": {
     "backgroundTextStyle": "light",

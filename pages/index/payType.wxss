@@ -1,0 +1,86 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 2rpx;
+}
+.payTypeContent{
+  height: 360rpx;
+  display: felx;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top:1px solid #EFEFEF;
+  border-bottom:20rpx solid #EFEFEF;
+}
+.progress{
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: row;
+   justify-content: center; 
+}
+.progress progress{
+  width: 50%
+}
+.progressDes{
+  width: 60%;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #999;
+}
+.orderPrice{
+  width: 100%;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.orderPrice text:first-child{
+  color: black;
+  font-size: 32rpx;
+}
+.orderPrice view{
+  color: #d4237a;
+  margin-top: -10rpx;
+}
+.orderPrice view span{
+  font-size: 48rpx;
+}
+.remind{
+  margin: 20rpx auto;
+  width: 100%;
+  color: #132;
+  font-size: 28rpx;
+  text-align: center;
+}
+.remind span{
+  color: #d4237a;
+}
+.payType{
+  height: 80rpx;
+  border-bottom:1px solid #EFEFEF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+}
+.payType text:first-child{
+  color: #999;
+}
+.payType icon{
+  margin-right: 20rpx;
+}
+.payType text:nth-child(2){
+  color: black;
+}
+.gopay{
+  position: fixed;
+  bottom: 20rpx;
+  width: 100%; 
+}
+.goPayBtn{
+  margin: 40rpx;
+  background-color: #d4237a;
+  color: #fff;
+}

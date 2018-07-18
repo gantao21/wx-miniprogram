@@ -1,0 +1,30 @@
+<view class='container'>
+  <view class='payTypeContent'>
+    <view class='progress'>
+      <icon type='success' size='10'></icon>
+      <progress percent="50" />
+      <icon size='10' type='info' color='#ccc'></icon>
+    </view>
+    <view class='progressDes'>
+      <text>提交订单</text>
+      <text>付款</text>
+    </view>
+    <view class='orderPrice'>
+      <text>订单金额：</text>
+      <view>¥<span>{{orderPrice}}</span></view>
+    </view>
+    <view class='remind'>
+    订单提交成功后，请在
+    <span>{{payTime}}</span>
+    分钟内完成支付。
+    </view>
+  </view>
+  <view class='payType'>
+    <text>支付方式：</text>
+    <icon type="success" size="15"/>
+    <text>微信支付</text>
+  </view>
+  <view class='gopay'>
+    <button class='goPayBtn'>去付款</button>
+  </view>
+</view>

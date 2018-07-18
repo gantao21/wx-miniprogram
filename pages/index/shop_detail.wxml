@@ -1,12 +1,155 @@
-<!--pages/index/shop.wxml-->
 <view class='container'>
   <view class="swiper-tab">
-      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">基本信息</view>
-      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">购买记录</view>
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">基本信息</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">购买记录</view>
   </view>
-
-  <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
-      <swiper-item ><view>基本信息</view></swiper-item>
-      <swiper-item><view>购买记录</view></swiper-item>
+  <swiper current="{{currentTab}}" duration="{{duration}}" bindchange="swiperTab" style='height:6800rpx;'>
+    <swiper-item>
+      <view class='article'>
+        <view class="page_column">
+          <view class='product_list '>
+            <view wx:for="{{productList}}" wx:key="{{item.id}}" wx:for-index="index" id='{{item.id}}' class='page_column item' catchtap="goDetail">
+              <view class='swiperImg'>
+                <swiper catchtap='onSwiperTap' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                  <block wx:for="{{item.imgData}}" wx:key="key">
+                    <swiper-item>
+                      <image src="{{item.imgUrl}}" class="slide-image" data-id="{{item.id}}">
+                      </image>
+                    </swiper-item>
+                  </block>
+                </swiper>
+              </view>
+              <view id='discountView'>
+                <view>
+                  <text>¥{{item.discountPrice}}</text>
+                  <text>¥{{item.price}}</text>
+                </view>
+                <view>
+                  <text>{{item.deadTimeDes}}</text>
+                  <text>{{item.deadTime}}</text>
+                </view>
+              </view>
+              <view class='title page_column'>
+                <view style='width:75%'>
+                  <text>{{item.title}}</text>
+                  <text style='color:#999;font-size:24rpx;'>{{item.subtitle}}</text>
+                </view>
+                <view class='fans' style=''>
+                  <text>{{item.fansDes}}</text>
+                  <text>{{item.fansNum}}</text>
+                </view>
+              </view>
+              <view class='content'>
+                <view class='page_column left_content'>
+                  <text>{{item.resaleTime}}</text>
+                  <text>{{item.acceptTime}}</text>
+                </view>
+                <view class='page_column '>
+                  <view class='row' wx:if="{{item.isSellout==false}}">
+                    <text>已售</text>
+                    <text style='color:#ed1991'>{{item.soldNum}}</text>
+                    <text>份/ 限量{{item.repertoryNum}}份</text>
+                  </view>
+                  <view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class='step'>
+            <text>数量</text>
+            <view class='stepper'>
+              <button class="{{minusStatus}}" bindtap="bindMinus" plain='true'>-</button>
+              <input type="number" bindchange="bindManual" value="{{num}}" />
+              <button class="normal" bindtap="bindPlus" plain='true'>+</button>
+            </view>
+          </view>
+        </view>
+        <view class='goodsDetail'>
+          <view class='goodsDes'>
+            <view class='des_line'></view>
+            <text>商品详情</text>
+            <view class='des_line'></view>
+          </view>
+          <view class='goodsTable'>
+            <view class='tableRow' wx:for="{{goodsDetail}}" wx:key="">
+              <view class="td">{{item.des}}</view>
+              <view class="td">{{item.value}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='imagesDetail'>
+          <view class='imagesDes'>
+            <view class='des_line'></view>
+            <text>图片详情</text>
+            <view class='des_line'></view>
+          </view>
+          <view class='imageText'>
+            <textarea>{{imagesDes}}</textarea>
+            <text>产地：{{place}}</text>
+          </view>
+        </view>
+        <view class='imageList'>
+          <block wx:for='{{imagesUrl}}' wx:key="{{iten.id}}">
+            <image src='{{item.imgUrl}}' mode='scaleToFill'></image>
+          </block>
+        </view>
+        <view class='orderProcess'>
+          <view class='orderProcess_title'>
+            <text>订购流程</text>
+          </view>
+          <view class='orderProcess_content'>
+            <view class='orderProcess_img'></view>
+            <view class='orderProcess_tree'>
+              <block wx:for='{{orderProcessData}}' wx:key='{{item.id}}'>
+                <text>{{item.des}}</text>
+                <text>{{item.value}}</text>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='footImg'>
+        <cover-image src='{{footImg}}'></cover-image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='shopRecord'>
+        <view class='record_title'>目前工
+          <span>{{peopelNum}}</span>
+          人参与购买，商品共销售
+          <span>{{saleNum}}</span>份
+        </view>
+        <view class='record_table'>
+          <view class='record_table_row' wx:for='{{shopRecordData}}' wx:key='{{item.id}}'>
+            <view class='record_table_tr'>
+              <view>
+                <image src='{{item.headImg}}'></image>
+                <text>{{item.userName}}</text>
+              </view>
+              <view><span>{{item.shopNum}}</span>份</view>
+              <view>{{item.orderTime}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='record_footer' catchtap="goDetail">
+          <text>--点击查看商品信息--</text>
+        </view>
+      </view>
+    </swiper-item>
   </swiper>
+  <view class='footerTab'>
+    <view catchtap="goCar">
+      <image src='../../img/shopCar.png'></image>
+      <view class='{{addNumState}}'>
+        <text>{{addNum}}</text>
+      </view>
+    </view>
+    <view class='{{addCarState}}' bindtap='addToCar'>
+      <text>加入购物车</text>
+    </view>
+    <view class='{{buyState}}' catchtap="goBuy">
+      <text>立即购买</text>
+    </view>
+  </view>
 </view>

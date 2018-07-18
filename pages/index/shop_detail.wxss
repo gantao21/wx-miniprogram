@@ -1,9 +1,15 @@
+.container{
+  padding-bottom: 100rpx;
+}
+.article{
+  margin-top: -44rpx;
+}
 .swiper-tab{
     width: 100%;
     border-bottom: 2rpx solid #ccc;
     text-align: center;
-    height: 88rpx;
-    line-height: 88rpx;
+    height: 88rpx; 
+    line-height: 88rpx; 
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -11,11 +17,419 @@
 .swiper-tab-item{
     width: 30%; 
     color:#434343;
+    font-size: 28rpx;
 }
 .active{
     color:#d4237a;
     border-bottom: 4rpx solid #d4237a;
 }
-swiper{
+.swiperImg {
+  width: 100%;
+}
+.slide-image{
+  width: 100%;
+}
+#discountView{
+    display: flex;
+    flex-direction:row;
+    height: 100rpx;
+}
+#discountView view:first-child{
+  background-color: red;
+  width: 55%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+
+}
+#discountView view:first-child text:first-child{
+  width: 60%;
+  margin-left: 20rpx;
+  font-size: 60rpx;
+}
+#discountView view:first-child text:nth-child(2){
+  width: 40%;
+  margin-top: 24rpx;
+  font-size: 30rpx;
+  text-decoration:line-through;
+}
+#discountView view:nth-child(2){
+  background-color: yellow;
+  width: 45%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+}
+#discountView view:nth-child(2) text:first-child{
+  font-size: 26rpx;
   text-align: center;
+  margin-top: 10rpx;
+} 
+#discountView view:nth-child(2) text:nth-child(2){
+  font-size: 40rpx;
+  text-align: center;
+} 
+.page_column{
+  display: flex;
+  margin-top: 20rpx;
+  flex-direction: column
+}
+.title{
+  display: flex;
+  flex-direction: row;
+}
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+} 
+
+.product_list .pic image{
+  width: 100%;
+  height: 200px;
+}
+.product_list .item{
+    border-bottom: 20rpx  solid #EFEFEF;
+    padding: 20rpx;
+}
+ 
+.title text{
+  font-size: 14px;
+}
+.content {
+  display: flex;
+  border-top: 1rpx  solid #EFEFEF;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+}
+.left_content{
+  font-size: 14px;
+}
+.left_content  text{
+  color: #ed1991;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #999;
+}
+.fans{
+  width:30%;
+  height:40rpx;  
+  padding:10rpx 10rpx;
+  margin-top: 20rpx;
+  background-color:#d4237a;
+  display:flex;
+  flex-direction: row;
+  color: #fff;
+  border-radius: 20rpx;
+}
+.step{
+  padding:0 20rpx;
+  height: 160rpx;
+  border-bottom:20rpx solid #EFEFEF
+}
+.step text:first-child{
+  font-size: 30rpx;
+  color: #999;
+  display: block;
+  margin-top: 60rpx;
+
+}
+.stepper {  
+    width: 320rpx;  
+    height: 80rpx;  
+    border: 1px solid #ccc;  
+    border-radius: 6rpx;  
+    margin:-60rpx auto;
+    display: flex;
+    flex-direction: row;  
+}  
+  
+.stepper button {  
+    width: 80rpx;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    font-size: 40rpx;
+    border: 0px;
+}  
+.stepper input {  
+    width: 160rpx;  
+    height: 80rpx;  
+    text-align: center;  
+    font-size: 28rpx;  
+    border-left: 1px solid #ccc;  
+    border-right: 1px solid #ccc;  
+}  
+  
+.stepper .normal{  
+    color: #d4237a;
+}
+  
+.stepper .disabled{  
+    color: #ccc;  
+}
+.goodsDetail{
+  padding: 20rpx;
+  height: 500rpx;
+  border-bottom:20rpx solid #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.goodsDetail .goodsDes,.imagesDetail .imagesDes{
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  width: 84%;
+  margin: 0 auto;
+}
+.goodsDetail .goodsTable{
+  border: 1px solid #ccc;
+  height: 80%;
+  width: 84%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.goodsDetail .goodsDes text,.imagesDetail .imagesDes text{
+  width: 40%;
+  color: #999;
+  font-size: 30rpx;
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+}
+.des_line{
+  margin:auto 10rpx;
+  width: 30%;
+  height: 1px;
+  background-color: #ccc;
+}
+.goodsDetail .goodsTable .tableRow{
+display: flex;
+flex-direction: row;
+height: 25%;
+color: #999;
+font-size: 28rpx;
+}
+.tableRow .td:first-child{
+width:40%;
+border-right: 1rpx solid #ddd;
+border-bottom: 1rpx solid #ddd;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.goodsTable .td:nth-child(2){
+width:60%;
+border-bottom: 1rpx solid #ddd;
+display: flex;
+padding-left:40rpx;
+align-items: center;
+color: #000;
+}
+.imagesDetail{
+  padding: 20rpx;
+  height: 260rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.imageText{
+  width: 100%;
+  height: 80%;
+  color: #999;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+}
+.imageText textarea{
+  width: 100%;
+  height: 91%;
+}
+ .imageText text{
+  width: 100%;
+  height: 10%;
+} 
+.imageList{
+  padding: 20rpx; 
+  display: flex;
+  flex-direction: column;
+  border-bottom:20rpx solid #EFEFEF
+
+}
+.imageList image{
+   width: 100%; 
+}
+.orderProcess{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx 0 20rpx;
+  height: 400rpx;
+}
+.orderProcess .orderProcess_title{
+  height: 100rpx;
+  border-bottom: 2rpx solid #ccc;
+  color: #000;
+  font-size: 30rpx; 
+  display: flex;
+  align-items: center
+
+}
+ .orderProcess .orderProcess_content{
+   height: 300rpx;
+} 
+.orderProcess .orderProcess_content{
+  display: flex;
+  flex-direction: row;
+}
+.orderProcess_img{
+  height: 220rpx;
+  width: 2rpx;
+  margin: auto 20rpx;
+  background-color:#ccc;
+}
+.orderProcess_tree{
+  display: flex;
+  flex-direction: column;
+  margin: auto 20rpx;
+}
+.orderProcess_tree text:nth-child(odd){
+  color: #000;
+  font-size: 28rpx;
+}
+.orderProcess_tree text:nth-child(even){
+  color: #999;
+  font-size: 26rpx;
+}
+.footerTab{
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.footerTab view{
+  width: 33.333333333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerTab view:not(:first-child){
+  color: #fff;
+  font-size: 30rpx;
+}
+.footerTab .addCarStateNone,.footerTab .buyStateNone{
+    background-color: #999;
+    height: 100rpx;
+}
+.footerTab .addCarStateActive{
+  background-color: #d4237a;
+  height: 100rpx;
+
+}
+.footerTab .buyStateActive{
+  background-color: red;
+  height: 100rpx;
+
+}
+.footerTab view:first-child image{
+width: 70rpx;
+height: 70rpx;
+}
+.footerTab view:first-child view{
+  background-color:red;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-top: -40rpx;
+  margin-left: -20rpx;
+}
+.footerTab view:first-child view text{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.footerTab view:first-child .active{
+  display:block
+}
+.footerTab view:first-child .zero{
+  display:none
+}
+.footerTab view:nth-child(2){
+  border-right: 2rpx solid #fff;
+}
+.shopRecord{
+  display: flex;
+  flex-direction: column;
+  /* padding: 20rpx; */
+}
+.record_title{
+  height: 80rpx;
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 28rpx;
+}
+.record_table{
+  display: flex;
+  flex-direction: column;
+}
+.record_table_row{
+  padding: 20rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+}
+.record_table_tr{
+display: flex;
+flex-direction: row;
+font-size: 24rpx;
+color: #000;
+align-items: center;
+border-bottom: 2rpx solid #ccc;
+}
+.record_table_tr view:first-child{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.record_table_tr view:first-child image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.record_table_tr view:nth-child(2){
+  width: 20%;
+}
+.record_table_tr view:nth-child(2) span,.record_title span{
+  color: #d4237a;
+}
+.record_table_tr view:nth-child(3){
+  width: 40%;
+  text-align: right;
+}
+.record_footer{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4237a;
+  font-size: 28rpx;
+  background-color: #ddd;
 }

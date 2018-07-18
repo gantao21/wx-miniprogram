@@ -1,0 +1,84 @@
+<view class='container'>
+  <view class='locationInfo'>
+    <view class='userInfo'>
+      <text>收货人：</text>
+      <view>
+        <input type='text' class='userinfo-nickname' value='还是要微笑。'></input>
+      </view>
+      <view>
+        <input type='number' value='15873176452'></input>
+      </view>
+    </view>
+    <view class='location'>
+      <text>提货地点：</text>
+      <text>{{location}}</text>
+    </view>
+    <view class='takeLocation'>
+      <text>自提点：</text>
+      <text>{{takeLocation}}  </text>
+      <text>{{callPhone}}</text>
+    </view>
+
+  </view>
+  <view class='goodsInfo'>
+    <view class='shopDetail' wx:for="{{shopOrderDetail}}" wx:key="item.id">
+      <view>
+        <image src='{{item.shopImageUrl}}' mode='aspectFit'></image>
+      </view>
+      <view>
+        <text>{{item.title}}</text>
+        <text>{{item.subTitle}}</text>
+        <text>{{item.time}}</text>
+        <view>
+          <text>¥{{discountPrice}}</text>
+          <text>¥{{price}}</text>
+          <text>x{{num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='step'>
+      <text>购买数量</text>
+      <view class='stepper'>
+        <button class="{{minusStatus}}" bindtap="bindMinus" plain='true'>-</button>
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <button class="normal" bindtap="bindPlus" plain='true'>+</button>
+      </view>
+    </view>
+  </view>
+  <view class='totalPrice'>
+    <view>
+      <text>共{{num}}件商品 合计：</text>
+      <text>¥{{totalPrice}}</text>
+    </view>
+    <view>
+     <text>应付金额：</text>
+     <text>¥{{totalPrice}}</text>
+    </view>
+  </view>
+  <view class='submit'>
+    <button type="primary" bindtap="submit"> 提交 </button>
+  </view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+    <view class='modalTitle'>
+        <text>此商品需要您到店自提，请仔细确认地址！</text>
+    </view>
+    <view class='modalContent' wx:for="{{shopOrderDetail}}" wx:key="item.id">
+      <view>
+        <text>提货地址：</text>
+        <text>{{location}}</text>
+      </view>
+      <view>
+        <text>自提点：</text>
+        <text>({{takeLocation}}  {{callPhone}})</text>
+      </view>
+      <view>
+      <text>{{item.time}}</text>
+      </view>
+    </view>
+    <view class='modalBtn'>
+        <button class='cancelBtn' bindtap="cancel" plain='false'>取消付款</button>
+        <button class='confirmBtn' plain='false' bindtap='confirmBtn'>确认订单</button>
+    </view>
+</view>
+</view>

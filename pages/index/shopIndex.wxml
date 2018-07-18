@@ -1,3 +1,4 @@
+<!-- <!shopIndex.wxml-->
 <view class="container">
 <view>
     <cover-image src="{{titleImg}}"></cover-image>

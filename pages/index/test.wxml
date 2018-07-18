@@ -1,0 +1,29 @@
+<!--hom.wxml-->
+<view class="container">
+  <view >
+    <swiper catchtap='onSwiperTap'  style='height:150px;' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgData}}">
+        <swiper-item>
+          <image style='width:100%' src="{{item.img}}"class="slide-image"data-id="{{item.id}}" />
+        </swiper-item>
+
+      </block>
+    </swiper>
+  </view>
+  
+  <view class='title'>
+    <label>服务项目</label>
+  </view>
+  <view wx:for="{{array}}">
+    <view class="appView" catchtap='appTap'>
+      <view style=' border:0.5px solid #e6e6e6;height:100%;width:100%'>
+        <view>
+          <image style="width:48rpx;height:48rpx;margin-top:5rpx;" src='https://gitdocument.exmobi.cn/agile-vm/docs/demo/assets/img/main/cwcx.png'></image>
+        </view>
+        <label> {{item.message}}</label>
+      </view>
+    </view>
+  </view>
+
+</view>
+  
